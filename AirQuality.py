@@ -1,7 +1,6 @@
 from tkinter import *
 import requests
 import json
-#test comment:
 root = Tk()
 root.geometry("600x50")
 
@@ -12,6 +11,7 @@ try:
 
     api_request = requests.get(link)
     api  = json.loads(api_request.content)
+
     city = api[0]['ReportingArea']
     quality = api[0]['AQI']
     category = api[0]['Category']['Name']
